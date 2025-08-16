@@ -1,0 +1,15 @@
+{
+  "hybrid:keywords:340de95fd0f18a72ada2ce8d30da903e": {
+    "return": "{\"high_level_keywords\": [\"Arduino code\", \"Sensor integration\", \"Real-time monitoring\", \"Environmental data\", \"Alert system\"], \"low_level_keywords\": [\"PIR motion sensor\", \"MQ-2 gas sensor\", \"D2 pin\", \"A0 pin\", \"300 threshold\", \"Serial Monitor\", \"2 seconds\", \"Sensor statuses\", \"Alert: Motion and Gas Detected!\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "embedding": null,
+    "embedding_shape": null,
+    "embedding_min": null,
+    "embedding_max": null,
+    "original_prompt": "Write Arduino code to use a PIR motion sensor (OUT to D2) and an MQ-2 gas sensor (A0 to A0). If motion is detected and gas level exceeds a threshold (e.g., 300), print “Alert: Motion and Gas Detected!” to the Serial Monitor. Print all sensor statuses every 2 seconds.",
+    "create_time": 1753740383,
+    "update_time": 1753740383,
+    "_id": "hybrid:keywords:340de95fd0f18a72ada2ce8d30da903e"
+  }
+}
