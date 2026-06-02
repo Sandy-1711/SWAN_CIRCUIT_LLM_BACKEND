@@ -74,14 +74,14 @@ The generation flow is focused on converting natural-language prompts into:
 
 Create a `.env` file from `.env.example` and set:
 
-- `DB_URL` - SQLAlchemy connection string (example: `postgresql://<user>:<password>@<host>:<port>/<database>`)
+- `DB_URL` - SQLAlchemy connection string (PostgreSQL URL containing user, password, host, port, and database name)
 - `SECRET_KEY` - JWT signing key
 - `ALGORITHM` - JWT algorithm (example: `HS256`)
 - `ACCESS_TOKEN_EXPIRE_MINUTES` - token expiration in minutes
 - `HF_TOKEN` - optional Hugging Face token (if required by your runtime)
 - `LLAMA_LOG_LEVEL` - llama runtime logging level
 
-The `DB_URL` example above uses placeholders only. Do not hardcode real credentials in code or docs. `.env` is already gitignored in this repository for local development; for production, prefer secret managers and managed authentication flows over static passwords.
+The `DB_URL` format shown above uses placeholders only. Do not hardcode real credentials in code or docs. `.env` is already gitignored in this repository for local development; for production, prefer secret managers and managed authentication flows over static passwords.
 
 ## Setup and Run
 
@@ -147,5 +147,5 @@ The `DB_URL` example above uses placeholders only. Do not hardcode real credenti
 ## Notes
 
 - CORS is currently configured for `http://localhost:3000` and `http://localhost:3001`.
-- Cookies are set with `domain=localhost` and `secure=False` for local development. In production, enable HTTPS, keep `httponly=True` and set `secure=True` to reduce XSS exposure, and enforce an appropriate `SameSite` value (for example `Lax`/`Strict`) to reduce CSRF risk.
+- Cookies are set with `domain=localhost` and `secure=False` for local development. `HttpOnly=true` should remain enabled in all environments to reduce XSS exposure; in production, also enable HTTPS, set `secure=True`, and enforce an appropriate `SameSite` value (for example `Lax`/`Strict`) to reduce CSRF risk.
 - The project currently has no automated test suite committed in this repository.
